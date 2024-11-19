@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Ecommerce</string>
+    <string name="open_nav">open navigation drawer</string>
+    <string name="close_nav">close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //Headings
+    <string name="heading_one">Welcome to FashionHub</string>
+    <string name="heading_two">Explore Fashion Collections</string>
+    <string name="heading_three">Pay Easy, Shop Easy</string>
+    <string name="heading_fourth">Pay Anywhere</string>
+
+    //Description
+    <string name="desc_one">Discover the latest trends and stylish collections at your fingertips. FashionHub brings you the best in apparel, accessories, and more</string>
+    <string name="desc_two">Shop from curated collections featuring exclusive styles from leading designers. Find outfits that fit your unique personality and taste</string>
+    <string name="desc_three">With secure payment methods like credit cards, digital wallets, and cash on delivery, shopping has never been easier and safer</string>
+    <string name="desc_fourth">Pay easily anytime, anywhere, with your preferred method and enjoy a seamless, secure shopping experience</string>
+
+    <style name="my_style">
+        <item name="android:layout_width">85dp</item>
+        <item name="android:layout_height">85dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textColor">#F80000
+        </item>
+    </style>
+    <!-- res/values/styles.xml -->
+    <string name="api_key">AIzaSyDeNXKJCFQ9jTkEExHYLNEvBJ73xzAghBY</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

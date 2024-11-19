@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".activity.FashionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/backimg"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="-10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ecommercelogo"
+            android:alpha="0.1"
+            android:rotation="-1" />
+
+        <TextView
+            android:id="@+id/welcometxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/black"
+            android:text="welcome "
+            android:textSize="28sp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/welcome2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#D3376C"
+            android:layout_marginStart="4dp"
+            android:text=","
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/welcometxt"
+            app:layout_constraintTop_toTopOf="@+id/welcometxt" />
+
+        <TextView
+            android:id="@+id/headtxt"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="We have prepared new products for you"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/welcometxt"
+            app:layout_constraintTop_toBottomOf="@+id/welcometxt" />
+
+        <TextView
+            android:id="@+id/weeklytop"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="6dp"
+
+            android:layout_marginBottom="10dp"
+            android:text="Weekly Top"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/welcometxt"
+            app:layout_constraintTop_toBottomOf="@+id/headtxt" />
+
+        <!-- LinearLayout containing the ViewFlipper -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginStart="19dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/weeklytop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="400dp"
+                    android:layout_height="200dp"
+                    android:layout_marginEnd="20dp"
+                    android:elevation="10dp"
+                    android:background="@drawable/card_shape_categories1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/image1"
+                        android:contentDescription="imag1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="400dp"
+                    android:layout_height="200dp"
+                    android:layout_marginEnd="20dp"
+                    android:elevation="10dp"
+                    android:background="@drawable/card_shape_categories1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/tshirt1"
+                        android:contentDescription="image2" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="320dp"
+                    android:layout_height="200dp"
+                    android:layout_marginEnd="20dp"
+                    android:elevation="10dp"
+                    android:background="@drawable/card_shape_categories1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/phone"
+                        android:contentDescription="imag3" />
+                </RelativeLayout>
+
+            </ViewFlipper>
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="26dp"
+                android:text="Favourite items"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewFlipper" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginTop="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewFlipper">
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="200dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="320dp"
+                        android:layout_height="200dp"
+                        android:layout_marginEnd="20dp"
+                        android:elevation="10dp"
+                        android:background="@drawable/card_shape_categories1">
+
+                        <ImageView
+                            android:id="@+id/cardimg21"
+                            app:srcCompat="@drawable/tshirtswomen2"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/card_shape"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/cardtxt21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 50"
+                            android:layout_below="@id/cardimg21"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/poppins_light"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="320dp"
+                        android:layout_height="200dp"
+                        android:elevation="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/card_shape_categories1">
+
+                        <ImageView
+                            android:id="@+id/cardimg22"
+                            app:srcCompat="@drawable/shoe1"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:background="@drawable/card_shape"
+                            android:layout_marginTop="2dp"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/cardtxt22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 34"
+                            android:layout_below="@id/cardimg22"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/poppins_light"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="320dp"
+                        android:layout_height="200dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/card_shape_categories1">
+
+                        <ImageView
+                            android:id="@+id/cardimg23"
+                            app:srcCompat="@drawable/necklace"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="2dp"
+                            android:layout_height="170dp"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cardtxt23"
+                            android:text="$ 20"
+                            android:layout_below="@id/cardimg23"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/poppins_light"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="320dp"
+                        android:layout_height="200dp"
+                        android:layout_marginEnd="20dp"
+                        android:elevation="10dp"
+                        android:background="@drawable/card_shape_categories1">
+
+                        <ImageView
+                            android:id="@+id/cardimg24"
+                            app:srcCompat="@drawable/watch"
+                            android:layout_width="match_parent"
+
+                            android:layout_marginTop="2dp"
+                            android:layout_height="170dp"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cardtxt24"
+                            android:text="$ 33"
+                            android:layout_below="@id/cardimg24"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/poppins_light"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="320dp"
+                        android:layout_height="200dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/card_shape_categories1">
+
+                        <ImageView
+                            android:id="@+id/cardimg25"
+                            app:srcCompat="@drawable/mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cardtxt25"
+                            android:text="$ 88"
+                            android:layout_below="@id/cardimg25"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_light"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/textscrollview2"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="26dp"
+                android:text="Top Categories"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_light"
+
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal2" />
+
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal3"
+                android:layout_width="match_parent"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <!-- First item of second scroll view -->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp">
+                        <ImageView
+                            android:id="@+id/cardimg31"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/items"
+                            android:background="@drawable/category_card_bc"
+                            style="@style/my_style"
+                            app:tint="#E26690"
+                            android:scaleType="centerInside" />
+
+
+                        <TextView
+                            android:id="@+id/cardtx31"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="All"
+                            android:layout_marginStart="26dp"
+                            android:layout_marginTop="3dp"
+
+                            android:fontFamily="@font/poppins_light"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:layout_below="@id/cardimg31"
+                            android:layout_alignStart="@id/cardimg31"
+                            android:layout_alignEnd="@id/cardimg31" />
+                    </RelativeLayout>
+
+                    <!-- Second item -->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/cardimg32"
+                            app:srcCompat="@drawable/all"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/category_card_bc"
+                            style="@style/my_style" />
+
+                        <TextView
+                            android:id="@+id/textView72"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="electronics"
+                            android:gravity="center"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:textColor="@color/black"
+                            android:textSize="9sp"
+                            android:textStyle="bold"
+                            android:layout_below="@id/cardimg32"
+                            android:layout_alignStart="@id/cardimg32"
+                            android:layout_alignEnd="@id/cardimg32" />
+                    </RelativeLayout>
+
+                    <!-- Third item -->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/cardimg33"
+                            app:srcCompat="@drawable/sneakers"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/category_card_bc"
+                            style="@style/my_style" />
+
+                        <TextView
+                            android:id="@+id/cardtxt33"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="shoes"
+                            android:gravity="center"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:textColor="@color/black"
+                            android:textSize="9sp"
+                            android:textStyle="bold"
+                            android:layout_below="@id/cardimg33"
+                            android:layout_alignStart="@id/cardimg33"
+                            android:layout_alignEnd="@id/cardimg33" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/cardimg34"
+                            app:srcCompat="@drawable/fashion"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/category_card_bc"
+                            style="@style/my_style" />
+
+                        <TextView
+                            android:id="@+id/cardtxt34"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="fashions"
+                            android:gravity="center"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:textColor="@color/black"
+                            android:textSize="9sp"
+                            android:textStyle="bold"
+                            android:layout_below="@id/cardimg34"
+                            android:layout_alignStart="@id/cardimg34"
+                            android:layout_alignEnd="@id/cardimg34" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/cardimg35"
+                            app:srcCompat="@drawable/watch1"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/category_card_bc"
+                            style="@style/my_style" />
+
+                        <TextView
+                            android:id="@+id/cardtxt35"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Snacks"
+                            android:gravity="center"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:textColor="@color/black"
+                            android:textSize="9sp"
+                            android:textStyle="bold"
+                            android:layout_below="@id/cardimg35"
+                            android:layout_alignStart="@id/cardimg35"
+                            android:layout_alignEnd="@id/cardimg35" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/recommended"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="0dp"
+                android:text="Recommended"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/welcome2"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal3" />
+
+            <GridView
+                android:id="@+id/grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:numColumns="2"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                app:layout_constraintTop_toBottomOf="@+id/recommended" />
+
+
+
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="© 2024 Your App Name"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy Policy"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="195dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#C55178"
+    android:gravity="bottom"
+
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/circularImageView"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ecommercelogo"
+        android:alpha=".1"
+        app:shapeAppearanceOverlay="@style/CircularShape" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingStart="10dp"
+        android:text="Welcome "
+        android:textColor="#1A1717"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="jagadeeshbardaval78@gmail.com"
+        android:paddingStart="10dp"
+        android:textColor="#101010"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp"/>
+
+
+</LinearLayout>

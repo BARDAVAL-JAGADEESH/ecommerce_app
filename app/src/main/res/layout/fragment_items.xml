@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:background="@null"
+        android:contentDescription="back"
+        android:padding="5dp"
+        android:src="@drawable/baseline_keyboard_backspace_24"
+        app:tint="@color/white" />
+
+    <!-- ProgressBar for loading products -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:progressDrawable="@android:drawable/progress_horizontal"
+        android:visibility="gone"
+        android:indeterminateTint="#DC477A" />
+
+    <!-- RecyclerView to display products -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/back_button"
+        android:padding="16dp" />
+</RelativeLayout>

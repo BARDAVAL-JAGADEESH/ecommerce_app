@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/blank"
+            android:icon="@drawable/all"
+            android:title="blank"
+            />
+
+
+        <item
+            android:id="@+id/Cartfab"
+            android:title="Cart "
+            android:icon="@drawable/addcart"
+            />
+        <item
+            android:id="@+id/cartdata"
+            android:title="Cart Data"
+            android:icon="@drawable/item"
+            />
+
+        <item
+            android:id="@+id/flipslide"
+            android:icon="@drawable/fashion"
+            android:title="Fashion"
+            />
+        <item
+            android:id="@+id/itemapi"
+            android:icon="@drawable/all"
+            android:title="Product Itmes"
+            />
+        <item
+            android:id="@+id/feedactivity"
+            android:icon="@drawable/feedbackdata"
+            android:title="Users Feedback"
+            />
+        <item
+            android:id="@+id/about"
+            android:title="About Us"
+            android:icon="@drawable/info"
+            />
+
+        <item
+            android:id="@+id/share"
+            android:title="Share"
+            android:icon="@drawable/share_24"
+            />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/logout"
+                android:title="logout"
+                />
+
+
+        </menu>
+    </item>
+</menu>
